@@ -25,7 +25,7 @@ dir_landsat_process = choose.dir()
 
 # Choosing Shapefile to crop data
 bacia_hidrografica = readOGR(choose.files())
-proj_shape = crs(bacia_hidrografica)
+proj_shape = st_crs(bacia_hidrografica)
 
 # 3 - Crop Process
 for(k in 2:length(lista_dir_imagens)){
